@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1716000517 source:c:\users\luca\documents\utn\utnprojecto\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+
+1716510409 source:c:\users\luca\documents\utn\utnprojecto - copia\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"OpcionesMenu.h"
+
+1716510308 c:\users\luca\documents\utn\utnprojecto - copia\declaraciones.h
+
+1716509448 c:\users\luca\documents\utn\utnprojecto - copia\bienvenida.h
+
+1716509587 c:\users\luca\documents\utn\utnprojecto - copia\reglas.h
+
+1716509716 c:\users\luca\documents\utn\utnprojecto - copia\cierredeljuego.h
+
+1716509802 c:\users\luca\documents\utn\utnprojecto - copia\menuprincipal.h
+
+1716509951 c:\users\luca\documents\utn\utnprojecto - copia\pedirnombres.h
+
+1716510046 c:\users\luca\documents\utn\utnprojecto - copia\mostrarcuadricula.h
+
+1716510109 c:\users\luca\documents\utn\utnprojecto - copia\ingresoincorrecto.h
+
+1716510213 c:\users\luca\documents\utn\utnprojecto - copia\volverosalir.h
+
+1716510327 c:\users\luca\documents\utn\utnprojecto - copia\opcionesmenu.h
+
+1716558592 source:d:\utnprojectoactual\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"OpcionesMenu.h"
+
+1716558406 d:\utnprojectoactual\declaraciones.h
+
+1716558358 d:\utnprojectoactual\bienvenida.h
+
+1716558406 d:\utnprojectoactual\reglas.h
+
+1716554659 d:\utnprojectoactual\cierredeljuego.h
+
+1716558416 d:\utnprojectoactual\menuprincipal.h
+
+1716553459 d:\utnprojectoactual\pedirnombres.h
+
+1716510046 d:\utnprojectoactual\mostrarcuadricula.h
+
+1716510109 d:\utnprojectoactual\ingresoincorrecto.h
+
+1716558367 d:\utnprojectoactual\volverosalir.h
+
+1716557300 d:\utnprojectoactual\opcionesmenu.h
+
