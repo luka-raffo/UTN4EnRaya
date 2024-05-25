@@ -1,0 +1,147 @@
+# depslib dependency file v1.0
+1716000517 source:c:\users\luca\documents\utn\utnprojecto\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+
+1716510409 source:c:\users\luca\documents\utn\utnprojecto - copia\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"OpcionesMenu.h"
+
+1716510308 c:\users\luca\documents\utn\utnprojecto - copia\declaraciones.h
+
+1716509448 c:\users\luca\documents\utn\utnprojecto - copia\bienvenida.h
+
+1716509587 c:\users\luca\documents\utn\utnprojecto - copia\reglas.h
+
+1716509716 c:\users\luca\documents\utn\utnprojecto - copia\cierredeljuego.h
+
+1716509802 c:\users\luca\documents\utn\utnprojecto - copia\menuprincipal.h
+
+1716509951 c:\users\luca\documents\utn\utnprojecto - copia\pedirnombres.h
+
+1716510046 c:\users\luca\documents\utn\utnprojecto - copia\mostrarcuadricula.h
+
+1716510109 c:\users\luca\documents\utn\utnprojecto - copia\ingresoincorrecto.h
+
+1716510213 c:\users\luca\documents\utn\utnprojecto - copia\volverosalir.h
+
+1716510327 c:\users\luca\documents\utn\utnprojecto - copia\opcionesmenu.h
+
+1716558592 source:d:\utnprojectoactual\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"OpcionesMenu.h"
+
+1716558406 d:\utnprojectoactual\declaraciones.h
+
+1716558358 d:\utnprojectoactual\bienvenida.h
+
+1716558406 d:\utnprojectoactual\reglas.h
+
+1716554659 d:\utnprojectoactual\cierredeljuego.h
+
+1716558416 d:\utnprojectoactual\menuprincipal.h
+
+1716553459 d:\utnprojectoactual\pedirnombres.h
+
+1716510046 d:\utnprojectoactual\mostrarcuadricula.h
+
+1716510109 d:\utnprojectoactual\ingresoincorrecto.h
+
+1716558367 d:\utnprojectoactual\volverosalir.h
+
+1716557300 d:\utnprojectoactual\opcionesmenu.h
+
+1716581133 source:c:\users\scott\downloads\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+
+1716581240 c:\users\scott\downloads\declaraciones.h
+
+1716579229 c:\users\scott\downloads\bienvenida.h
+
+1716579208 c:\users\scott\downloads\reglas.h
+
+1716581282 c:\users\scott\downloads\cierredeljuego.h
+
+1716581240 c:\users\scott\downloads\menuprincipal.h
+
+1716579210 c:\users\scott\downloads\pedirnombres.h
+
+1716580095 c:\users\scott\downloads\mostrarcuadricula.h
+
+1716579219 c:\users\scott\downloads\ingresoincorrecto.h
+
+1716581240 c:\users\scott\downloads\volverosalir.h
+
+1716601863 source:c:\users\luca\documents\utn\utnproject\4enraya\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"ingresoJugadores.h"
+
+1716611615 c:\users\luca\documents\utn\utnproject\4enraya\declaraciones.h
+
+1716589387 c:\users\luca\documents\utn\utnproject\4enraya\bienvenida.h
+
+1716589387 c:\users\luca\documents\utn\utnproject\4enraya\reglas.h
+
+1716590101 c:\users\luca\documents\utn\utnproject\4enraya\cierredeljuego.h
+
+1716611615 c:\users\luca\documents\utn\utnproject\4enraya\menuprincipal.h
+
+1716589387 c:\users\luca\documents\utn\utnproject\4enraya\pedirnombres.h
+
+1716612612 c:\users\luca\documents\utn\utnproject\4enraya\mostrarcuadricula.h
+
+1716589387 c:\users\luca\documents\utn\utnproject\4enraya\ingresoincorrecto.h
+
+1716590827 c:\users\luca\documents\utn\utnproject\4enraya\volverosalir.h
+
+1716613207 c:\users\luca\documents\utn\utnproject\4enraya\ingresojugadores.h
+
