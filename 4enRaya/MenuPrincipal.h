@@ -33,6 +33,9 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
 
             system ("cls");
             cargarMatrizCuadricula (matrizTablero, nfilas, ncol);
+            mostrarCuadricula();
+            system ("pause");
+            system ("cls");
             ingresoJugador1(matrizTablero, nfilas,  ncol, jugador1);
             ingresoJugador2(matrizTablero, nfilas,  ncol, jugador2);
             system ("pause");
