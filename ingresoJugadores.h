@@ -23,15 +23,14 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
         }
     }
 
-     for (int i=0; i<nfilas; i++)
+     for (int i=nfilas; i>0; i--)
     {
         for (int x=0; x<ncol; x++)
         {
 
-            cout<< matrizTablero[i][x] << "   ";
+            cout<< matrizTablero[i-1][x] << "   ";
 
         }
-        matrizTablero[nfilas][ncol];
         system("pause");
         cout<<endl;
 
@@ -67,16 +66,14 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
     }
 
 
-    for (int i=0; i<nfilas; i++)
+    for (int i=nfilas; i>0; i--)
     {
         for (int x=0; x<ncol; x++)
         {
 
-            cout<< matrizTablero[i][x] << "   ";
+            cout<< matrizTablero[i-1][x] << "   ";
 
         }
-
-        matrizTablero[nfilas][ncol];
         system("pause");
         cout<<endl;
 
