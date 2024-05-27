@@ -17,13 +17,17 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
     {
         for (int x=0; x<ncol-1; x++)
         {
+            bool hola = 0;
+            if (matrizTablero[i-1][0]=='-'&&hola==0)
+            {
+                matrizTablero[0][ingresoColumnaUsuario1-1]= 'O';
 
-            matrizTablero[ingresoFilaUsuario1-1][ingresoColumnaUsuario1-1]= 'O';
 
+            }
         }
     }
 
-     for (int i=nfilas; i>0; i--)
+    for (int i=nfilas; i>0; i--)
     {
         for (int x=0; x<ncol; x++)
         {
@@ -60,8 +64,13 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
         for (int x=0; x<ncol; x++)
         {
 
-            matrizTablero[ingresoFilaUsuario2-1][ingresoColumnaUsuario2-1]= 'X';
+            bool hola = 0;
+            if (matrizTablero[i-1][0]=='-')
+            {
+                matrizTablero[0][ingresoColumnaUsuario2-1]= 'X';
 
+
+            }
         }
     }
 
