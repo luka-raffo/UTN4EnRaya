@@ -2,13 +2,14 @@
 #define BIENVENIDA_H_INCLUDED
 
 void mostrarAnimacionbienvenida()
+
 {
     string primerCartel;
-    primerCartel="   [-----BIENVENIDO A-----]";
+    primerCartel="                                                 [-----BIENVENIDO A-----]";
     cout<<primerCartel;
     cout<<endl;
-    cout<<"[-----| CUATRO EN RAYA |-----]"<<endl;
-    Sleep(1000);
+    cout<<"                                              [-----| CUATRO EN RAYA |-----]"<<endl;
+    Sleep(2000);
     system ("cls");
 }
 
