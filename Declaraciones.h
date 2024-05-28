@@ -1,6 +1,7 @@
 #ifndef DECLARACIONES_H_INCLUDED
 #define DECLARACIONES_H_INCLUDED
 
+    void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol);
 
     void mostrarAnimacionbienvenida();
 
@@ -8,17 +9,23 @@
 
     bool cierreDelJuego ();
 
-    char mostrarMenuPrincipal (char ingresoMenu);
+    bool mostrarMenuPrincipal ();
 
     void pedirNombres(string *jugador1, string *jugador2);
 
-    void mostrarCuadricula();
+    void mostrarCuadricula(char matrizTablero [][7]);
 
     void ingresoIncorrecto();
 
-    char VolverOSalir ();
+    bool volverAlMenu ();
 
-    char opcionesMenu(char ingresoMenu);
+    char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol, string);
+
+    char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string);
+
+
+
+
 
 
 #endif // DECLARACIONES_H_INCLUDED
