@@ -1,49 +1,37 @@
 #ifndef INGRESOJUGADORES_H_INCLUDED
 #define INGRESOJUGADORES_H_INCLUDED
 
+
 char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador1)
 {
+
     int ingresoColumnaUsuario1;
     int ingresoFilaUsuario1;
-
 
     cout<<"- "<<jugador1<<", ingrese la COLUMNA donde quiera poner su ficha: ";
     cin>>ingresoColumnaUsuario1;
     cout<<endl;
-    cout<<"- Ingrese la FILA donde quiera poner su ficha: ";
-    cin>>ingresoFilaUsuario1;
 
-    for (int i=0; i<nfilas-1; i++)
-    {
-        for (int x=0; x<ncol-1; x++)
-        {
-            bool hola = 0;
-            if (matrizTablero[i-1][0]=='-'&&hola==0)
+            if (ingresoColumnaUsuario1>ncol or ingresoColumnaUsuario1==0)
             {
-                matrizTablero[0][ingresoColumnaUsuario1-1]= 'O';
-
-
+                cout<<"[Esta columna no existe, ingrese una columna valida]: ";
+                cin>>ingresoColumnaUsuario1;
+                cout<<endl;
             }
-        }
-    }
 
-    for (int i=nfilas; i>0; i--)
+    for (int i=0; i<ncol-1; i++)
     {
-        for (int x=0; x<ncol; x++)
-        {
-
-            cout<< matrizTablero[i-1][x] << "   ";
-
-        }
-        system("pause");
-        cout<<endl;
-
-
+            bool hola = 0;
+            if (matrizTablero[i][ingresoColumnaUsuario1-1] == '-')
+            {
+                matrizTablero[i][ingresoColumnaUsuario1-1]= 'O';
+                break;
+            }
 
     }
+        mostrarCuadricula(matrizTablero);
 
 }
-
 
 char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugador2)
 {
@@ -54,44 +42,30 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
     cout<<"- "<<jugador2<<", ingrese la COLUMNA donde quiera poner su ficha: ";
     cin>>ingresoColumnaUsuario2;
     cout<<endl;
-    cout<<"- Ingrese la FILA donde quiera poner su ficha: ";
-    cin>>ingresoFilaUsuario2;
-    cout<<endl;
 
-
-    for (int i=0; i<nfilas; i++)
-    {
-        for (int x=0; x<ncol; x++)
-        {
-
-            bool hola = 0;
-            if (matrizTablero[i-1][0]=='-')
+            if (ingresoColumnaUsuario2>ncol or ingresoColumnaUsuario2==0)
             {
-                matrizTablero[0][ingresoColumnaUsuario2-1]= 'X';
-
-
+                cout<<"[Esta columna no existe, ingrese una columna valida]: ";
+                cin>>ingresoColumnaUsuario2;
+                cout<<endl;
             }
-        }
-    }
 
 
-    for (int i=nfilas; i>0; i--)
+    for (int i=0; i<ncol-1; i++)
     {
-        for (int x=0; x<ncol; x++)
-        {
+            bool hola = 0;
+            if (matrizTablero[i][ingresoColumnaUsuario2-1] == '-')
+            {
 
-            cout<< matrizTablero[i-1][x] << "   ";
-
-        }
-        system("pause");
-        cout<<endl;
+                matrizTablero[i][ingresoColumnaUsuario2-1]= 'X';
+                break;
+            }
 
     }
 
-
-
-
+        mostrarCuadricula(matrizTablero);
 
 }
 
 #endif // INGRESOJUGADORES_H_INCLUDED
+
