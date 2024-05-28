@@ -7,16 +7,16 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
 
 
     char ingresoMenu;
-    cout<<"                 [     CUATRO EN RAYA     ]"<<endl;
-    cout<<"================================================================="<<endl;
-    cout<<"           [------- Seleccione una opcion -------] "<<endl;
-    cout<<"================================================================="<<endl;
-    cout<<"               -> Seleccione [1] para jugar <- "<<endl;
-    cout<<"-> Seleccione [2] para ver los objetivos y las reglas del juego <- "<<endl;
-    cout<<"               -> Seleccione [0] para salir <- "<<endl;
-    cout<<"================================================================="<<endl;
+    cout<<"                                             [     CUATRO EN RAYA     ]"<<endl;
+    cout<<"========================================================================================================================"<<endl;
+    cout<<"                                       [------- Seleccione una opcion -------] "<<endl;
+    cout<<"========================================================================================================================"<<endl;
+    cout<<"                                           -> Seleccione [1] para jugar <- "<<endl;
+    cout<<"                        -> Seleccione [2] para ver los objetivos y las reglas del juego <- "<<endl;
+    cout<<"                                           -> Seleccione [0] para salir <- "<<endl;
+    cout<<"========================================================================================================================"<<endl;
 
-    cout<<"Mi opcion es la - ";
+    cout<<"                                                Mi opcion es la - ";
     cin>>ingresoMenu;
 
     system("cls");
@@ -32,14 +32,15 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
             ///logica del juego
 
             system ("cls");
-            cargarMatrizCuadricula (matrizTablero, nfilas, ncol);
+            cargarMatrizCuadricula(matrizTablero, nfilas, ncol);
+            mostrarCuadricula(matrizTablero);
             ingresoJugador1(matrizTablero, nfilas,  ncol, jugador1);
             ingresoJugador2(matrizTablero, nfilas,  ncol, jugador2);
-            system ("cls");
+            ingresoJugador1(matrizTablero, nfilas,  ncol, jugador1);
+            ingresoJugador2(matrizTablero, nfilas,  ncol, jugador2);
             system ("pause");
+            system ("cls");
             return 1;
-
-
 
             break;
 
