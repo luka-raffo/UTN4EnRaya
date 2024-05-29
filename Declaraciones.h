@@ -1,6 +1,8 @@
 #ifndef DECLARACIONES_H_INCLUDED
 #define DECLARACIONES_H_INCLUDED
 
+    void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol);
+
     void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol);
 
     void mostrarAnimacionbienvenida();

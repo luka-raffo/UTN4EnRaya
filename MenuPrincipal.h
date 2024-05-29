@@ -3,7 +3,7 @@
 
 bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
 {
-    matrizTablero[nfilas][ncol];
+
 
 
     char ingresoMenu;
@@ -27,18 +27,16 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
         {
         case '1':
 
-            pedirNombres(&jugador1, &jugador2);
 
             ///logica del juego
 
             system ("cls");
             cargarMatrizCuadricula(matrizTablero, nfilas, ncol);
-            mostrarCuadricula(matrizTablero);
-            ingresoJugador1(matrizTablero, nfilas,  ncol, jugador1);
-            ingresoJugador2(matrizTablero, nfilas,  ncol, jugador2);
-            ingresoJugador1(matrizTablero, nfilas,  ncol, jugador1);
-            ingresoJugador2(matrizTablero, nfilas,  ncol, jugador2);
-            system ("pause");
+
+
+            logicaDelJuego(matrizTablero, nfilas, ncol);
+
+
             system ("cls");
             return 1;
 

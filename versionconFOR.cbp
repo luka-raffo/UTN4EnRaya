@@ -44,6 +44,9 @@
 		<Unit filename="IngresoIncorrecto.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Logica.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="MenuPrincipal.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

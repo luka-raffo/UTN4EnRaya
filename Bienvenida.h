@@ -8,7 +8,7 @@ void mostrarAnimacionbienvenida()
     primerCartel="                                                 [-----BIENVENIDO A-----]";
     cout<<primerCartel;
     cout<<endl;
-    cout<<"                                              [-----| CUATRO EN RAYA |-----]"<<endl;
+    cout<<"                                               [-----| CUATRO EN RAYA |-----]"<<endl;
     Sleep(2000);
     system ("cls");
 }

@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1716930400 source:c:\users\luca\desktop\master\utn4enraya\utn4enraya\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"ingresoJugadores.h"
+	"Logica.h"
+
+1716918167 c:\users\luca\desktop\master\utn4enraya\utn4enraya\declaraciones.h
+
+1716917224 c:\users\luca\desktop\master\utn4enraya\utn4enraya\bienvenida.h
+
+1716917144 c:\users\luca\desktop\master\utn4enraya\utn4enraya\reglas.h
+
+1716917178 c:\users\luca\desktop\master\utn4enraya\utn4enraya\cierredeljuego.h
+
+1716923547 c:\users\luca\desktop\master\utn4enraya\utn4enraya\menuprincipal.h
+
+1716917144 c:\users\luca\desktop\master\utn4enraya\utn4enraya\pedirnombres.h
+
+1716917687 c:\users\luca\desktop\master\utn4enraya\utn4enraya\mostrarcuadricula.h
+
+1716917144 c:\users\luca\desktop\master\utn4enraya\utn4enraya\ingresoincorrecto.h
+
+1716917178 c:\users\luca\desktop\master\utn4enraya\utn4enraya\volverosalir.h
+
+1716917995 c:\users\luca\desktop\master\utn4enraya\utn4enraya\ingresojugadores.h
+
+1716929945 c:\users\luca\desktop\master\utn4enraya\utn4enraya\logicadeljuego.h
+
+1716947547 c:\users\luca\desktop\master\utn4enraya\utn4enraya\logica.h
+
+1716930400 source:c:\users\luca\desktop\utn4enraya\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"ingresoJugadores.h"
+	"Logica.h"
+
+1716918167 c:\users\luca\desktop\utn4enraya\declaraciones.h
+
+1716917224 c:\users\luca\desktop\utn4enraya\bienvenida.h
+
+1716917144 c:\users\luca\desktop\utn4enraya\reglas.h
+
+1716917178 c:\users\luca\desktop\utn4enraya\cierredeljuego.h
+
+1716948002 c:\users\luca\desktop\utn4enraya\menuprincipal.h
+
+1716917144 c:\users\luca\desktop\utn4enraya\pedirnombres.h
+
+1716917687 c:\users\luca\desktop\utn4enraya\mostrarcuadricula.h
+
+1716917144 c:\users\luca\desktop\utn4enraya\ingresoincorrecto.h
+
+1716917178 c:\users\luca\desktop\utn4enraya\volverosalir.h
+
+1716917995 c:\users\luca\desktop\utn4enraya\ingresojugadores.h
+
+1716947978 c:\users\luca\desktop\utn4enraya\logica.h
+

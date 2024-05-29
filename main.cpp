@@ -14,6 +14,7 @@ using namespace std;
 #include "IngresoIncorrecto.h"
 #include "VolverOSalir.h"
 #include "ingresoJugadores.h"
+#include "Logica.h"
 
 
 
@@ -45,16 +46,7 @@ int main()
 
     }
 
-    for (int i=0; i<6; i++)
-        {
-            for (int x=0; x<7; x++)
-            {
-                matrizTablero[i][x]= '-';
-                Sleep(10);
-            }
-        }
 
-        matrizTablero[6][7];
 
     return 0;
 }
