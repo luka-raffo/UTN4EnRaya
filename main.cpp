@@ -2,8 +2,10 @@
 #include <cstdlib>
 #include <string.h>
 #include <windows.h>
+#include "rlutil.h"
+#define R "\033[31m" //ROJO
+#define RESET "\033[0m" //RESET COLOR
 using namespace std;
-
 #include "Declaraciones.h"
 #include "Bienvenida.h"
 #include "Reglas.h"
@@ -16,10 +18,11 @@ using namespace std;
 #include "ingresoJugadores.h"
 #include "Logica.h"
 
-
-
 int main()
 {
+    rlutil::setBackgroundColor(rlutil::BLACK); //FONDO NEGRO
+    rlutil::setColor(rlutil::WHITE); //FONDO BLANCO
+
     char ingresoMenu;
     char opcionesMenu(char ingresoMenu);
     const int NFILAS =6;
@@ -27,26 +30,15 @@ int main()
 
     char matrizTablero[NFILAS][NCOLUMNAS];
 
-    ///nombre de jugadores
     string jugador1;
     string jugador2;
 
-    //mostrarAnimacionBienvenida()
-    mostrarAnimacionbienvenida();
+    mostrarAnimacionbienvenida(); //MOSTRAR CARTEL DE INICIO DEL PROGRAMA
 
-    //mostrar
+    while(mostrarMenuPrincipal(matrizTablero, NFILAS,  NCOLUMNAS))
+        {
 
-
-    while(mostrarMenuPrincipal(matrizTablero, NFILAS,  NCOLUMNAS)) {
-        //ejecutarMenu
-
-
-
-
-
-    }
-
-
+        }
 
     return 0;
 }
