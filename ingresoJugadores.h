@@ -16,6 +16,8 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
     while(ingresoCorrecto)
     {
+        //verificar si el ingreso jugador 1 no es una columna llena
+
         if (ingresoColumnaUsuario1>ncol or ingresoColumnaUsuario1==0)
         {
             rlutil::setColor(rlutil::RED);
@@ -33,6 +35,8 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
         for(int i=0; i<ncol; i++)
         {
+
+            //verificar si el ingreso jugador 1 no es una columna llena
             if(matrizTablero[5][i] != '-' && ingresoColumnaUsuario1==i+1 )
             {
                 rlutil::setColor(rlutil::RED);
@@ -83,6 +87,7 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
     while(ingresoCorrecto)
     {
+        //verificar si el ingreso jugador 2 no es una columna llena
         if (ingresoColumnaUsuario2>ncol or ingresoColumnaUsuario2==0)
         {
             rlutil::setColor(rlutil::RED);
@@ -97,6 +102,8 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
         {
             ingresoCorrecto=0;
         }
+
+        //verificar si el ingreso jugador 2 no es una columna llena
 
         for(int i=0; i<ncol; i++)
         {

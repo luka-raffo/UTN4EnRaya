@@ -12,6 +12,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
     int contadorFichasSeguidasX=1;
     bool banderaCorte = 0;
 
+
     while(banderaCorte!=1)
     {
 
@@ -84,6 +85,24 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
             break;
         }
 
+        int cont=0;
+        //empate
+        for (int i=0; i<nfilas; i++)
+            {
+                for (int x=0; x<ncol; x++)
+                {
+                   if(matrizTablero[i][x]=='-') {
+                    cont++;
+                   }
+                }
+            }
+            if (cont==0)    {
+                banderaCorte=1;
+            }
+
+            cout<<"hubo un empate"<<endl;
+
+
         //instruccion para que al ganar el jugador 1 no le de el turno al jugador 2
         if (banderaCorte!=1)
         {
@@ -152,7 +171,28 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 break;
             }
         }
+
+        cont=0;
+        //empate
+        for (int i=0; i<nfilas; i++)
+            {
+                for (int x=0; x<ncol; x++)
+                {
+                   if(matrizTablero[i][x]=='-') {
+                    cont++;
+                   }
+                }
+            }
+            if (cont==0)    {
+                banderaCorte=1;
+            }
+
+            cout<<"hubo un empate"<<endl;
     }
+
+
+
+
 
     volverAlMenu();
 
