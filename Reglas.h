@@ -4,16 +4,22 @@
 void mostrarReglas()
 {
     system ("cls");
+    rlutil::setColor(rlutil::CYAN);
+    rlutil::locate(50, 1);
     cout<<"[ OBJETIVOS DEL JUEGO ]"<<endl;
+    rlutil::setColor(rlutil::WHITE);
     cout<<endl;
-    cout<<"- El principal objetivo es ser el primero en alinear cuatro fichas consecutivas de tu color en cualquier direccion:\n  horizontal, vertical o diagonal."<<endl;
+    cout<<"- El principal objetivo es ser el primero en alinear cuatro de tus fichas consecutivas en cualquier direccion:\n  horizontal, vertical o diagonal."<<endl;
     cout<<"- Ademas de buscar formar tu propia linea de cuatro, es crucial bloquear los intentos del oponente de formar su propia \n  linea de cuatro."<<endl;
     cout<<"- Planificar movimientos futuros y anticipar las jugadas del oponente es clave para crear oportunidades de victoria y \n  evitar que el oponente logre conectar cuatro fichas primero."<<endl;
     cout<<"- Controlar las columnas centrales del tablero puede ser ventajoso, ya que ofrece mas oportunidades para conectar \n  cuatro en diferentes direcciones."<<endl;
     cout<<endl;
     cout<<"========================================================================================================================"<<endl;
     cout<<endl;
+    rlutil::setColor(rlutil::CYAN);
+    rlutil::locate(50, 13);
     cout<<"[ REGLAS DEL JUEGO ]"<<endl;
+    rlutil::setColor(rlutil::WHITE);
     cout<<endl;
     cout<<"- El juego es para dos jugadores."<<endl;
     cout<<"- El tablero es una cuadricula de 7 columnas y 6 filas."<<endl;
@@ -24,7 +30,6 @@ void mostrarReglas()
     cout<<"- Si todas las posiciones del tablero estan llenas y ningun jugador ha logrado conectar cuatro fichas, el juego \n  termina en empate."<<endl;
     cout<<"- Las fichas no pueden ser removidas ni movidas una vez colocadas."<<endl;
     cout<<"========================================================================================================================"<<endl;
-    cout<<endl;
 
 }
 
