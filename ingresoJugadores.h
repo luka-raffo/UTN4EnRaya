@@ -7,14 +7,17 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
     int ingresoColumnaUsuario1;
 
-
-    cout<<"- "<<jugador1<<", ingrese la COLUMNA donde quiera poner su ficha: ";
+    rlutil::locate(31, 1);
+    cout<<"- "<<jugador1<<", ingrese la COLUMNA (1 a 7) donde quiera poner su ficha: ";
     cin>>ingresoColumnaUsuario1;
     cout<<endl;
 
             if (ingresoColumnaUsuario1>ncol or ingresoColumnaUsuario1==0)
             {
+                rlutil::setColor(rlutil::RED);
+                rlutil::locate(35, 18);
                 cout<<"[Esta columna no existe, ingrese una columna valida]: ";
+                rlutil::setColor(rlutil::WHITE);
                 cin>>ingresoColumnaUsuario1;
                 cout<<endl;
             }
@@ -24,11 +27,12 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
             if (matrizTablero[i][ingresoColumnaUsuario1-1] == '-')
             {
-                matrizTablero[i][ingresoColumnaUsuario1-1]= 'O';
+                matrizTablero[i][ingresoColumnaUsuario1-1]=  'O';
                 break;
             }
 
     }
+        system("cls");
         mostrarCuadricula(matrizTablero);
 
 }
@@ -40,14 +44,17 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
     int ingresoColumnaUsuario2;
 
-
-    cout<<"- "<<jugador2<<", ingrese la COLUMNA donde quiera poner su ficha: ";
+    rlutil::locate(31, 1);
+    cout<<"- "<<jugador2<<", ingrese la COLUMNA (1 a 7) donde quiera poner su ficha: ";
     cin>>ingresoColumnaUsuario2;
     cout<<endl;
 
             if (ingresoColumnaUsuario2>ncol or ingresoColumnaUsuario2==0)
             {
+                rlutil::setColor(rlutil::RED);
+                rlutil::locate(35, 18);
                 cout<<"[Esta columna no existe, ingrese una columna valida]: ";
+                rlutil::setColor(rlutil::WHITE);
                 cin>>ingresoColumnaUsuario2;
                 cout<<endl;
             }
@@ -58,13 +65,12 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
             if (matrizTablero[i][ingresoColumnaUsuario2-1] == '-')
             {
-
                 matrizTablero[i][ingresoColumnaUsuario2-1]= 'X';
                 break;
             }
 
     }
-
+        system("cls");
         mostrarCuadricula(matrizTablero);
 
 }
