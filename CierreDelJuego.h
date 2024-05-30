@@ -4,13 +4,13 @@
 bool cierreDelJuego()
 {
 
-
+    rlutil::setColor(rlutil::RED);
     cout<<"El juego se va a cerrar..."<<endl;
-
+    rlutil::setColor(rlutil::WHITE);
     system ("pause");
     system ("cls");
-
-    cout<<"¡Hasta la proxima!"<<endl;
+    rlutil::setColor(rlutil::CYAN);
+    cout<<"Â¡Hasta la proxima!"<<endl;
     return 0;
 
 }
