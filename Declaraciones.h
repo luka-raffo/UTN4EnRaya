@@ -22,11 +22,7 @@
     bool volverAlMenu ();
 
     char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol, string);
+
     char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string);
-
-
-
-
-
 
 #endif // DECLARACIONES_H_INCLUDED
