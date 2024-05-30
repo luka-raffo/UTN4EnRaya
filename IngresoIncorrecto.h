@@ -3,9 +3,11 @@
 
 void ingresoIncorrecto()
 {
+    rlutil::setColor(rlutil::RED);
     cout<<"No es valido, por favor, ingrese alguna opcion valida"<<endl;
-    system ("pause");
+    rlutil::anykey();
     system ("cls");
+    rlutil::setColor(rlutil::WHITE);
 }
 
 
