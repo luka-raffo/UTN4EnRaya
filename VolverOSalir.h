@@ -5,9 +5,15 @@
 bool volverAlMenu ()
 {
     char ingresoMenu;
+    rlutil::locate(1, 25);
+    cout<<"========================================================================================================================"<<endl;
+    rlutil::locate(42, 26);
     cout<<"-> Para volver al menu, ingrese [1] <-"<<endl;
-    cout<<"======================================"<<endl;
-    cout<<"Mi opcion es la - ";
+    rlutil::locate(1, 27);
+    cout<<"========================================================================================================================"<<endl;
+    rlutil::locate(57, 28);
+    cout<<"- ";
+    rlutil::locate(59, 28);
     cin>>ingresoMenu;
     system ("cls");
 
