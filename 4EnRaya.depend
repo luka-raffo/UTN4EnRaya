@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1717092560 source:c:\users\luca\desktop\utn4enraya\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<windows.h>
+	"rlutil.h"
+	"Declaraciones.h"
+	"Bienvenida.h"
+	"Reglas.h"
+	"CierreDelJuego.h"
+	"MenuPrincipal.h"
+	"PedirNombres.h"
+	"MostrarCuadricula.h"
+	"IngresoIncorrecto.h"
+	"VolverOSalir.h"
+	"ingresoJugadores.h"
+	"Logica.h"
+
+1717092560 c:\users\luca\desktop\utn4enraya\declaraciones.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\bienvenida.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\reglas.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\cierredeljuego.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\menuprincipal.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\pedirnombres.h
+
+1717095735 c:\users\luca\desktop\utn4enraya\mostrarcuadricula.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\ingresoincorrecto.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\volverosalir.h
+
+1717101390 c:\users\luca\desktop\utn4enraya\ingresojugadores.h
+
+1717092560 c:\users\luca\desktop\utn4enraya\logica.h
+
+1571584339 c:\users\luca\desktop\utn4enraya\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+

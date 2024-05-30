@@ -9,6 +9,8 @@ void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol){
 
             matrizTablero[i][x]= '-';
 
+
+
         }
     }
 
