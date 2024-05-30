@@ -77,4 +77,3 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
 #endif // INGRESOJUGADORES_H_INCLUDED
 
-
