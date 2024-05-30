@@ -27,10 +27,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 if(matrizTablero[i][x]=='O' && matrizTablero[i][x+1]=='O'&& matrizTablero[i][x+2]=='O'&& matrizTablero[i][x+3]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    cout<<"Has ganado "<<jugador1<<". ¡Felicitaciones!"<<endl;
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones"<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
-                    system("pause");
+                    rlutil::anykey();
                     cout<<endl;
                     banderaCorte=1;
                 }
@@ -40,10 +41,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 if(matrizTablero[i][x]=='O' && matrizTablero[i+1][x]=='O'&& matrizTablero[i+2][x]=='O'&& matrizTablero[i+3][x]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    cout<<"Has ganado "<<jugador1<<". ¡Felicitaciones!"<<endl;
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones"<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
-                    system("pause");
+                    rlutil::anykey();
                     cout<<endl;
                     banderaCorte=1;
 
@@ -54,10 +56,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 if(matrizTablero[i][x]=='O' && matrizTablero[i+1][x+1]=='O'&& matrizTablero[i+2][x+2]=='O'&& matrizTablero[i+3][x+3]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    cout<<"Has ganado "<<jugador1<<". ¡Felicitaciones!"<<endl;
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones"<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
-                    system("pause");
+                    rlutil::anykey();
                     cout<<endl;
                     banderaCorte=1;
                 }
@@ -67,10 +70,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 if(matrizTablero[i][x]=='O' && matrizTablero[i-1][x+1]=='O'&& matrizTablero[i-2][x+2]=='O'&& matrizTablero[i-3][x+3]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    cout<<"Has ganado "<<jugador1<<". ¡Felicitaciones!"<<endl;
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones"<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
-                    system("pause");
+                    rlutil::anykey();
                     cout<<endl;
                     banderaCorte=1;
                 }
@@ -93,10 +97,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     if(matrizTablero[i][x]=='X' && matrizTablero[i][x+1]=='X'&& matrizTablero[i][x+2]=='X'&& matrizTablero[i][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        cout<<"Has ganado "<<jugador2<<". ¡Felicitaciones!"<<endl;
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones"<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
-                        system("pause");
+                        rlutil::anykey();
                         cout<<endl;
                         banderaCorte=1;
                     }
@@ -105,10 +110,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     if(matrizTablero[i][x]=='X' && matrizTablero[i+1][x]=='X'&& matrizTablero[i+2][x]=='X'&& matrizTablero[i+3][x]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        cout<<"Has ganado "<<jugador2<<". ¡Felicitaciones!"<<endl;
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones"<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
-                        system("pause");
+                        rlutil::anykey();
                         cout<<endl;
                         banderaCorte=1;
 
@@ -119,10 +125,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     if(matrizTablero[i][x]=='X' && matrizTablero[i+1][x+1]=='X'&& matrizTablero[i+2][x+2]=='X'&& matrizTablero[i+3][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        cout<<"Has ganado "<<jugador2<<". ¡Felicitaciones!"<<endl;
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones"<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
-                        system("pause");
+                        rlutil::anykey();
                         cout<<endl;
                         banderaCorte=1;
                     }
@@ -132,10 +139,11 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     if(matrizTablero[i][x]=='X' && matrizTablero[i-1][x+1]=='X'&& matrizTablero[i-2][x+2]=='X'&& matrizTablero[i-3][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        cout<<"Has ganado "<<jugador2<<". ¡Felicitaciones!"<<endl;
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones"<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
-                        system("pause");
+                        rlutil::anykey();
                         cout<<endl;
                         banderaCorte=1;
                     }
