@@ -1,7 +1,7 @@
 #ifndef VOLVEROSALIR_H_INCLUDED
 #define VOLVEROSALIR_H_INCLUDED
 
-///FUNCION PARA VOLVER AL MENU O SALIR DEL JUEGO
+///FUNCION PARA VOLVER AL MENU
 bool volverAlMenu ()
 {
     char ingresoMenu;
@@ -20,7 +20,7 @@ bool volverAlMenu ()
     switch(ingresoMenu)
     {
     case '1':
-        mostrarAnimacionbienvenida();
+
         return 1;
         break;
 

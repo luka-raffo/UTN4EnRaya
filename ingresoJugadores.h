@@ -9,6 +9,7 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
     rlutil::locate(31, 1);
     cout<<"- "<<jugador1<<", ingrese la COLUMNA (1 a 7) donde quiera poner su ficha: ";
+    rlutil::setColor(rlutil::CYAN);
     cin>>ingresoColumnaUsuario1;
     cout<<endl;
     bool ingresoCorrecto=1;
@@ -25,7 +26,8 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
             cout<<"[Esta columna no existe, ingrese una columna valida]: ";
             rlutil::setColor(rlutil::WHITE);
             cin>>ingresoColumnaUsuario1;
-            cout<<endl;
+
+
             ingresoCorrecto=1;
         }
         else
@@ -50,6 +52,7 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
 
 
+
                 ingresoCorrecto=1;
             }
         }
@@ -58,11 +61,13 @@ char ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
 
     }
 
+    //colocacion de la ficha del jugador 1
     for (int i=0; i<ncol-1; i++)
     {
 
         if (matrizTablero[i][ingresoColumnaUsuario1-1] == '-')
         {
+
             matrizTablero[i][ingresoColumnaUsuario1-1]=  'O';
             break;
         }
@@ -80,8 +85,10 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
     bool ingresoCorrecto=1;
     int ingresoColumnaUsuario2;
 
+
     rlutil::locate(31, 1);
     cout<<"- "<<jugador2<<", ingrese la COLUMNA (1 a 7) donde quiera poner su ficha: ";
+    rlutil::setColor(rlutil::RED);
     cin>>ingresoColumnaUsuario2;
     cout<<endl;
 
@@ -95,7 +102,8 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
             cout<<"[Esta columna no existe, ingrese una columna valida]: ";
             rlutil::setColor(rlutil::WHITE);
             cin>>ingresoColumnaUsuario2;
-            cout<<endl;
+
+
             ingresoCorrecto=1;
         }
         else
@@ -112,11 +120,10 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
                 rlutil::setColor(rlutil::RED);
                 rlutil::locate(35, 18);
 
-                cout<<"[Esta columna no existe, ingrese una columna valida]: ";
+                cout<<"[Esta columna esta llena, ingrese una columna valida]: ";
                 rlutil::setColor(rlutil::WHITE);
 
                 cin>>ingresoColumnaUsuario2 ;
-
 
 
 
@@ -127,6 +134,9 @@ char ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
 
     }
+
+
+    //colocacion de la ficha del jugador 2
 
     for (int i=0; i<ncol-1; i++)
     {

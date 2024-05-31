@@ -31,12 +31,13 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
     rlutil::locate(1, 14);
     cout<<"========================================================================================================================"<<endl;
     cout<<endl;
-    rlutil::locate(59, 16);
-    cout<<"- ";
+    rlutil::locate(58, 16);
+    cout<<R<<"-> "<<RESET;
+    rlutil::locate(62, 16);
+    cout<<R<<" <-"<<RESET;
     rlutil::locate(61, 16);
     cin>>ingresoMenu;
     system("cls");
-
     string jugador1;
     string jugador2;
 

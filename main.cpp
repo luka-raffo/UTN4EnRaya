@@ -35,6 +35,7 @@ int main()
 
     mostrarAnimacionbienvenida(); //MOSTRAR CARTEL DE INICIO DEL PROGRAMA
 
+
     while(mostrarMenuPrincipal(matrizTablero, NFILAS,  NCOLUMNAS))
         {
 

@@ -2,6 +2,8 @@
 #define MOSTRARCUADRICULA_H_INCLUDED
 
 void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol){
+
+    //colocar todas las posiciones de la matriz = '-'
     for (int i=0; i<nfilas; i++)
     {
         for (int x=0; x<ncol; x++)
@@ -18,6 +20,8 @@ void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol){
 
 void mostrarCuadricula(char m [][7])
 {
+
+
     rlutil::locate(38, 3);
     cout << "|   |  "<<R<<"1"<<RESET<<"  |  "<<R<<"2"<<RESET<<"  |  "<<R<<"3"<<RESET<<"  |  "<<R<<"4"<<RESET<<"  |  "<<R<<"5"<<RESET<<"  |  "<<R<<"6"<<RESET<<"  |  "<<R<<"7"<<RESET<<"  |" << endl;
     rlutil::locate(38, 4);
