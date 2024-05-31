@@ -1,43 +1,35 @@
 # depslib dependency file v1.0
-1717150233 source:c:\users\luca\desktop\utn4enraya\main.cpp
+1717186153 source:c:\users\luca\desktop\utn4enraya\main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
 	<windows.h>
 	"rlutil.h"
 	"Declaraciones.h"
-	"Bienvenida.h"
-	"Reglas.h"
-	"CierreDelJuego.h"
-	"MenuPrincipal.h"
-	"PedirNombres.h"
-	"MostrarCuadricula.h"
-	"IngresoIncorrecto.h"
-	"VolverOSalir.h"
-	"ingresoJugadores.h"
-	"Logica.h"
+	"FuncionesGraficas.h"
+	"FuncionesDeJuego.h"
 
-1717092560 c:\users\luca\desktop\utn4enraya\declaraciones.h
+1717186302 c:\users\luca\desktop\utn4enraya\declaraciones.h
 
-1717092560 c:\users\luca\desktop\utn4enraya\bienvenida.h
+1717184940 c:\users\luca\desktop\utn4enraya\bienvenida.h
 
-1717092560 c:\users\luca\desktop\utn4enraya\reglas.h
+1717184884 c:\users\luca\desktop\utn4enraya\reglas.h
 
-1717092560 c:\users\luca\desktop\utn4enraya\cierredeljuego.h
+1717183349 c:\users\luca\desktop\utn4enraya\cierredeljuego.h
 
-1717150103 c:\users\luca\desktop\utn4enraya\menuprincipal.h
+1717183924 c:\users\luca\desktop\utn4enraya\menuprincipal.h
 
-1717151478 c:\users\luca\desktop\utn4enraya\pedirnombres.h
+1717184869 c:\users\luca\desktop\utn4enraya\pedirnombres.h
 
-1717151273 c:\users\luca\desktop\utn4enraya\mostrarcuadricula.h
+1717184562 c:\users\luca\desktop\utn4enraya\mostrarcuadricula.h
 
-1717092560 c:\users\luca\desktop\utn4enraya\ingresoincorrecto.h
+1717183822 c:\users\luca\desktop\utn4enraya\ingresoincorrecto.h
 
-1717149161 c:\users\luca\desktop\utn4enraya\volverosalir.h
+1717184912 c:\users\luca\desktop\utn4enraya\volverosalir.h
 
-1717151102 c:\users\luca\desktop\utn4enraya\ingresojugadores.h
+1717185176 c:\users\luca\desktop\utn4enraya\ingresojugadores.h
 
-1717150680 c:\users\luca\desktop\utn4enraya\logica.h
+1717185219 c:\users\luca\desktop\utn4enraya\logica.h
 
 1571584339 c:\users\luca\desktop\utn4enraya\rlutil.h
 	<iostream>
@@ -52,4 +44,10 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1717185444 c:\users\luca\desktop\utn4enraya\funcionesgraficas.h
+
+1717185357 c:\users\luca\desktop\utn4enraya\funcuinesdejuego.h
+
+1717185759 c:\users\luca\desktop\utn4enraya\funcionesdejuego.h
 

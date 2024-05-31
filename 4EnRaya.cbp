@@ -32,37 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Bienvenida.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CierreDelJuego.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="Declaraciones.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="IngresoIncorrecto.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Logica.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="MenuPrincipal.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="MostrarCuadricula.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PedirNombres.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Reglas.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="VolverOSalir.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="ingresoJugadores.h">
+		<Unit filename="FuncionesDeJuego.h" />
+		<Unit filename="FuncionesGraficas.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp">
