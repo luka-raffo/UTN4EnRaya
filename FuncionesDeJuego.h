@@ -2,11 +2,10 @@
 #define FUNCIONESDEJUEGO_H_INCLUDED
 
 
-void ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador1)
+void ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador1) ///FUNCION PARA PEDIR LA COLUMNA A JUGADOR 1
 {
 
     int ingresoColumnaUsuario1;
-
     rlutil::locate(31, 1);
     cout<<"- "<<jugador1<<", ingrese la COLUMNA (1 a 7) donde quiera poner su ficha: ";
     rlutil::setColor(rlutil::CYAN);
@@ -26,8 +25,6 @@ void ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
             cout<<"[Esta columna no existe, ingrese una columna valida]: ";
             rlutil::setColor(rlutil::WHITE);
             cin>>ingresoColumnaUsuario1;
-
-
             ingresoCorrecto=1;
         }
         else
@@ -43,21 +40,12 @@ void ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
             {
                 rlutil::setColor(rlutil::RED);
                 rlutil::locate(35, 18);
-
                 cout<<"[Esta columna no existe, ingrese una columna valida]: ";
                 rlutil::setColor(rlutil::WHITE);
-
                 cin>>ingresoColumnaUsuario1;
-
-
-
-
-
                 ingresoCorrecto=1;
             }
         }
-
-
 
     }
 
@@ -76,12 +64,9 @@ void ingresoJugador1(char matrizTablero[][7],int nfilas, int ncol,string jugador
     system("cls");
     mostrarCuadricula(matrizTablero);
 
-
 }
 
-
-
-void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugador2)
+void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugador2) ///FUNCION PARA PEDIR LA COLUMNA A JUGADOR 2
 {
     bool ingresoCorrecto=1;
     int ingresoColumnaUsuario2;
@@ -120,22 +105,14 @@ void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
             {
                 rlutil::setColor(rlutil::RED);
                 rlutil::locate(35, 18);
-
                 cout<<"[Esta columna esta llena, ingrese una columna valida]: ";
                 rlutil::setColor(rlutil::WHITE);
-
                 cin>>ingresoColumnaUsuario2 ;
-
-
-
                 ingresoCorrecto=1;
             }
         }
 
-
-
     }
-
 
     //colocacion de la ficha del jugador 2
 
@@ -154,22 +131,15 @@ void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
 }
 
-
-
-
-void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
+void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON LA LOGICA GENERAL DEL JUEGO
 {
     string jugador1;
     string jugador2;
     pedirNombres(&jugador1, &jugador2);
-
-
     bool banderaCorte = 0;
-
 
     while(banderaCorte!=1)
     {
-
         ingresoJugador1(matrizTablero, nfilas, ncol, jugador1);
 
         for (int i=0; i<nfilas; i++)
@@ -183,7 +153,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 {
                     rlutil::setColor(rlutil::GREEN);
                     rlutil::locate(45,18);
-                    cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
+                    cout<<"Â¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
                     rlutil::anykey();
@@ -203,7 +173,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 {
                     rlutil::setColor(rlutil::GREEN);
                     rlutil::locate(45,18);
-                    cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
+                    cout<<"Â¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
                     rlutil::anykey();
@@ -225,7 +195,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 {
                     rlutil::setColor(rlutil::GREEN);
                     rlutil::locate(45,18);
-                    cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
+                    cout<<"Â¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
                     rlutil::anykey();
@@ -245,7 +215,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                 {
                     rlutil::setColor(rlutil::GREEN);
                     rlutil::locate(45,18);
-                    cout<<"¡Felicitaciones " <<jugador1<<", has ganado!"<<endl;
+                    cout<<"Â¡Felicitaciones " <<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
                     rlutil::anykey();
@@ -255,11 +225,8 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
             }
         }
 
-
-
-
-        int contEmpate=0;
         //empate
+        int contEmpate=0;
         for (int i=0; i<nfilas; i++)
         {
             for (int x=0; x<ncol; x++)
@@ -275,12 +242,9 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
             banderaCorte=1;
             rlutil::setColor(rlutil::CYAN);
             rlutil::locate(45,18);
-            cout<<"¡Han empatado!, se nota que son competitivos..."<<endl;
+            cout<<"Â¡Han empatado!, se nota que son competitivos..."<<endl;
             rlutil::setColor(rlutil::WHITE);
-
         }
-
-
 
         //instruccion para que al ganar el jugador 1 no le de el turno al jugador 2
         if (banderaCorte!=1)
@@ -296,7 +260,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     {
                         rlutil::setColor(rlutil::GREEN);
                         rlutil::locate(45,18);
-                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<"Â¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
                         rlutil::anykey();
@@ -315,7 +279,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     {
                         rlutil::setColor(rlutil::GREEN);
                         rlutil::locate(45,18);
-                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<"Â¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
                         rlutil::anykey();
@@ -337,7 +301,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     {
                         rlutil::setColor(rlutil::GREEN);
                         rlutil::locate(45,18);
-                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<"Â¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
                         rlutil::anykey();
@@ -359,7 +323,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
                     {
                         rlutil::setColor(rlutil::GREEN);
                         rlutil::locate(45,18);
-                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<"Â¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
                         rlutil::anykey();
@@ -372,9 +336,8 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
 
         }
 
-
-        contEmpate=0;
         //empate
+        contEmpate=0;
         for (int i=0; i<nfilas; i++)
         {
             for (int x=0; x<ncol; x++)
@@ -390,16 +353,12 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol)
             banderaCorte=1;
             rlutil::setColor(rlutil::CYAN);
             rlutil::locate(45,18);
-            cout<<" ¡Han empatado!, se nota que son competitivos..."<<endl;
+            cout<<" Â¡Han empatado!, se nota que son competitivos..."<<endl;
             rlutil::setColor(rlutil::WHITE);
 
         }
 
     }
-
-
-
-
 
     volverAlMenu();
 
