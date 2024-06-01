@@ -1,6 +1,8 @@
 #ifndef DECLARACIONES_H_INCLUDED
 #define DECLARACIONES_H_INCLUDED
 
+    void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol);
+    void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador2);
 
     void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol);
 

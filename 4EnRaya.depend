@@ -1,15 +1,16 @@
 # depslib dependency file v1.0
-1717186153 source:c:\users\luca\desktop\utn4enraya\main.cpp
+1717208486 source:c:\users\luca\desktop\utn4enraya\main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
+	<time.h>
 	<windows.h>
 	"rlutil.h"
 	"Declaraciones.h"
 	"FuncionesGraficas.h"
 	"FuncionesDeJuego.h"
 
-1717186302 c:\users\luca\desktop\utn4enraya\declaraciones.h
+1717207325 c:\users\luca\desktop\utn4enraya\declaraciones.h
 
 1717184940 c:\users\luca\desktop\utn4enraya\bienvenida.h
 
@@ -45,9 +46,9 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1717185444 c:\users\luca\desktop\utn4enraya\funcionesgraficas.h
+1717207149 c:\users\luca\desktop\utn4enraya\funcionesgraficas.h
 
 1717185357 c:\users\luca\desktop\utn4enraya\funcuinesdejuego.h
 
-1717185759 c:\users\luca\desktop\utn4enraya\funcionesdejuego.h
+1717209203 c:\users\luca\desktop\utn4enraya\funcionesdejuego.h
 

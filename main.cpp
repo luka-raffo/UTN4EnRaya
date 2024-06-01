@@ -1,11 +1,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <string.h>
+#include <time.h>
 #include <windows.h>
 #include "rlutil.h"
 #define R "\033[31m" //ROJO
 #define RESET "\033[0m" //RESET COLOR
 using namespace std;
+
+
 
 //headers propios
 #include "Declaraciones.h"
@@ -14,6 +17,8 @@ using namespace std;
 
 int main()
 {
+
+    srand(time(NULL));
     rlutil::setBackgroundColor(rlutil::BLACK); //FONDO NEGRO
     rlutil::setColor(rlutil::WHITE); //FONDO BLANCO
 

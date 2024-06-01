@@ -27,6 +27,7 @@ void ingresoIncorrecto() ///FUNCION EN CASO DE UN INGRESO INCORRECTO
 bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol) ///FUNCION PARA MOSTRAR EL MENU PRINCIPAL
 {
     char ingresoMenu;
+    char IngresoModoDeJuego;
     cout<<endl;
     rlutil::setColor(rlutil::CYAN);
     rlutil::locate(3, 3);
@@ -78,15 +79,40 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol) ///FUNC
 
             cargarMatrizCuadricula(matrizTablero, nfilas, ncol);
 
+            cout<<"[1]jugador vs jugador "<<endl;
+            cout<<"[2]jugador vs maquina "<<endl;
+
+            cout<<"ingrese el modo de juego: ";
+            cin>>IngresoModoDeJuego;
 
 
+            switch(IngresoModoDeJuego) //INICIO DEL SWITCH DE OPCIONES
+        {
+
+            case '1':
             logicaDelJuego(matrizTablero, nfilas, ncol);
-
             system ("cls");
+
+            break;
+
+            case '2':
+                JuegoContraMaquina( matrizTablero, nfilas, ncol);
+                system ("cls");
+            break;
+            default:
+
+            ingresoIncorrecto();
+
+            break;
+        }
+
+
+
 
             return 1;
 
             break;
+
 
         case '2': //MOSTRAR REGLAS Y OBJETIVOS
 
