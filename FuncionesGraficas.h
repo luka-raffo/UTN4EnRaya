@@ -10,7 +10,7 @@ bool cierreDelJuego() ///FUNCION PARA SALIR DEL JUEGO
     system ("pause");
     system ("cls");
     rlutil::setColor(rlutil::CYAN);
-    cout<<"¡Hasta la proxima!"<<endl;
+    cout<<"Â¡Hasta la proxima!"<<endl;
     return 0;
 
 }
@@ -76,15 +76,36 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol) ///FUNC
         case '1': //INICIAR JUEGO
 
             system ("cls");
-
             cargarMatrizCuadricula(matrizTablero, nfilas, ncol);
-
-            cout<<"[1]jugador vs jugador "<<endl;
-            cout<<"[2]jugador vs maquina "<<endl;
-
-            cout<<"ingrese el modo de juego: ";
+            cout<<endl;
+            rlutil::locate(53, 2);
+            rlutil::setColor(rlutil::CYAN);
+            cout<<"[MODOS DISPONIBLES]"<<endl;
+            rlutil::setColor(rlutil::WHITE);
+            cout<<endl;
+            rlutil::locate(1, 4);
+            rlutil::setColor(rlutil::BLUE);
+            cout<<"========================================================================================================================"<<endl;
+            rlutil::setColor(rlutil::WHITE);
+            cout<<endl;
+            rlutil::locate(37, 6);
+            cout<<R<<"->"<<RESET<<" Para jugar el modo de dos jugadores, ingrese [1] "<<R<<"<-"<<RESET<<endl;
+            rlutil::locate(36, 8);
+            cout<<R<<"->"<<RESET<<" Para jugar en contra de "<<R<<"Panchito"<<RESET<<" (IA), ingrese [2] "<<R<<"<-"<<RESET<<endl;
+            rlutil::locate(40, 10);
+            cout<<R<<"->"<<RESET<<" Para volver al menu principal, ingrese [3] "<<R<<"<-"<<RESET<<endl;
+            rlutil::setColor(rlutil::BLUE);
+            rlutil::locate(1, 12);
+            cout<<"========================================================================================================================"<<endl;
+            rlutil::setColor(rlutil::WHITE);
+            cout<<endl;
+            rlutil::locate(58, 14);
+            cout<<R<<"-> "<<RESET;
+            rlutil::locate(62, 14);
+            cout<<R<<" <-"<<RESET;
+            rlutil::locate(61, 14);
             cin>>IngresoModoDeJuego;
-
+            system("cls");
 
             switch(IngresoModoDeJuego) //INICIO DEL SWITCH DE OPCIONES
         {
@@ -99,6 +120,11 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol) ///FUNC
                 JuegoContraMaquina( matrizTablero, nfilas, ncol);
                 system ("cls");
             break;
+
+            case '3':
+                return 1;
+                break;
+
             default:
 
             ingresoIncorrecto();
