@@ -1,9 +1,10 @@
 #ifndef FUNCIONESDEJUEGO_H_INCLUDED
 #define FUNCIONESDEJUEGO_H_INCLUDED
 
-void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)   {
+void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCION DE JUEGO VS MAQUINA
+{
     string jugador1;
-    string jugador2="Raul";
+    string jugador2="Panchito";
     bool banderaCorte = 0;
 
     system ("cls");
@@ -133,7 +134,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)   {
             {
                 for (int x=0; x<ncol-3; x++)
                 {
-                    //determina si hubo 4 3n raya en horizontal
+                    //determina si hubo 4 en raya en horizontal
                     if(matrizTablero[i][x]=='X' && matrizTablero[i][x+1]=='X'&& matrizTablero[i][x+2]=='X'&& matrizTablero[i][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
@@ -371,16 +372,16 @@ void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
 }
 
-void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador2)  {
+void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador2) ///FUNCION DE INGRESOS DE LA MAQUINA
+{
+
     bool ingresoCorrecto=1;
     int ingresoMaquina=rand()%7+1 ;
 
-
-    rlutil::locate(31, 1);
-    cout<<"- El ingreso de "<<jugador2<<",es : "<<ingresoMaquina;
+    rlutil::locate(45, 1);
+    cout<<"- El ingreso de "<<jugador2<<", es: "<<R<<ingresoMaquina<<RESET;
     cout<<endl;
-
-    system("pause");
+    rlutil::anykey();
     rlutil::locate(31, 1);
 
     while(ingresoCorrecto)
@@ -393,8 +394,6 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
             cout<<"[Esta columna no existe, ingrese una columna valida]: ";
             rlutil::setColor(rlutil::WHITE);
             cin>>ingresoMaquina;
-
-
             ingresoCorrecto=1;
         }
         else
@@ -433,10 +432,6 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     }
     system("cls");
     mostrarCuadricula(matrizTablero);
-
-
-
-
 
 }
 
