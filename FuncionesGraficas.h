@@ -1,7 +1,7 @@
 #ifndef FUNCIONESGRAFICAS_H_INCLUDED
 #define FUNCIONESGRAFICAS_H_INCLUDED
 
-bool cierreDelJuego()
+bool cierreDelJuego() ///FUNCION PARA SALIR DEL JUEGO
 {
 
     rlutil::setColor(rlutil::RED);
@@ -10,12 +10,12 @@ bool cierreDelJuego()
     system ("pause");
     system ("cls");
     rlutil::setColor(rlutil::CYAN);
-    cout<<"¡Hasta la proxima!"<<endl;
+    cout<<"Â¡Hasta la proxima!"<<endl;
     return 0;
 
 }
 
-void ingresoIncorrecto()
+void ingresoIncorrecto() ///FUNCION EN CASO DE UN INGRESO INCORRECTO
 {
     rlutil::setColor(rlutil::RED);
     cout<<"No es valido, por favor, ingrese alguna opcion valida"<<endl;
@@ -24,41 +24,47 @@ void ingresoIncorrecto()
     rlutil::setColor(rlutil::WHITE);
 }
 
-bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
+bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol) ///FUNCION PARA MOSTRAR EL MENU PRINCIPAL
 {
     char ingresoMenu;
     cout<<endl;
-    rlutil::locate(47, 2);
     rlutil::setColor(rlutil::CYAN);
-    cout<<"[ -->  CUATRO EN RAYA  <-- ]"<<endl;
+    rlutil::locate(3, 3);
+    cout << "  _____   __    __   ______   ________   ______   ______      ______   _    _      ______   ______   _  _   ______   "<<endl;
+    rlutil::locate(3, 4);
+    cout << " |  ___| |  |  |  | |  __  | |__    __| |  __  | |  __  |    |  ____| | |  | |    |  __  | |  __  | | || | |  __  | "<<endl;
+    rlutil::locate(3, 5);
+    cout << " | |     |  |  |  | | |__| |    |  |    | |__) | | |  | |    | |___   |  | | |    | |__) | | |__| | |_  _| | |__| | "<<endl;
+    rlutil::locate(3, 6);
+    cout << " | |     |  |  |  | |  __  |    |  |    |  __  / | |  | |    |  ___|  |   /  |    |  __  / |  __  |  |  |  |  __  | "<<endl;
+    rlutil::locate(3, 7);
+    cout << " | |___  |  |__|  | | |  | |    |  |    | |  | | | |__| |    | |____  |      |    | |  | | | |  | |  |  |  | |  | | "<<endl;
+    rlutil::locate(3, 8);
+    cout << " |_____| |________| |_|  |_|    |__|    |_|  |_| |______|    |______| |__||__|    |_|  |_| |_|  |_|  |__|  |_|  |_| "<<endl;
     rlutil::setColor(rlutil::WHITE);
     cout<<endl;
-    rlutil::locate(1, 4);
+    rlutil::locate(1, 11);
+    rlutil::setColor(rlutil::BLUE);
     cout<<"========================================================================================================================"<<endl;
-    cout<<endl;
-    rlutil::setColor(rlutil::CYAN);
-    rlutil::locate(42, 6);
-    cout<<"[------> Seleccione una opcion <------] "<<endl;
     rlutil::setColor(rlutil::WHITE);
     cout<<endl;
-    rlutil::locate(1, 8);
-    cout<<"========================================================================================================================"<<endl;
-    cout<<endl;
-    rlutil::locate(46, 10);
+    rlutil::locate(46, 13);
     cout<<R<<"->"<<RESET<<" Seleccione [1] para jugar "<<R<<"<- "<<RESET<<endl;
-    rlutil::locate(29, 11);
+    rlutil::locate(29, 14);
     cout<<R<<"->"<<RESET<<" Seleccione [2] para ver los objetivos y las reglas del juego "<<R<<"<- "<<RESET<<endl;
-    rlutil::locate(46, 12);
+    rlutil::locate(46, 15);
     cout<<R<<"->"<<RESET<<" Seleccione [0] para salir "<<R<<"<- "<<RESET<<endl;
     cout<<endl;
-    rlutil::locate(1, 14);
+    rlutil::locate(1, 17);
+    rlutil::setColor(rlutil::BLUE);
     cout<<"========================================================================================================================"<<endl;
+    rlutil::setColor(rlutil::WHITE);
     cout<<endl;
-    rlutil::locate(58, 16);
+    rlutil::locate(58, 19);
     cout<<R<<"-> "<<RESET;
-    rlutil::locate(62, 16);
+    rlutil::locate(62, 19);
     cout<<R<<" <-"<<RESET;
-    rlutil::locate(61, 16);
+    rlutil::locate(61, 19);
     cin>>ingresoMenu;
     system("cls");
     string jugador1;
@@ -106,8 +112,8 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol)
 }
 
 
-void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol){
-
+void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol) ///FUNCION PARA CARGAR LA MATRIZ CON GUIONES
+{
     //colocar todas las posiciones de la matriz = '-'
     for (int i=0; i<nfilas; i++)
     {
@@ -116,16 +122,13 @@ void cargarMatrizCuadricula (char matrizTablero[][7],int nfilas, int ncol){
 
             matrizTablero[i][x]= '-';
 
-
-
         }
     }
 
 }
 
-void mostrarCuadricula(char m [][7])
+void mostrarCuadricula(char m [][7]) ///FUNCION PARA MOSTRAR CUADRICULA DE JUEGO
 {
-
 
     rlutil::locate(38, 3);
     cout << "|   |  "<<R<<"1"<<RESET<<"  |  "<<R<<"2"<<RESET<<"  |  "<<R<<"3"<<RESET<<"  |  "<<R<<"4"<<RESET<<"  |  "<<R<<"5"<<RESET<<"  |  "<<R<<"6"<<RESET<<"  |  "<<R<<"7"<<RESET<<"  |" << endl;
@@ -159,7 +162,7 @@ void mostrarCuadricula(char m [][7])
 
 }
 
-void pedirNombres(string *jugador1, string *jugador2)
+void pedirNombres(string *jugador1, string *jugador2) ///FUNCION PARA PEDIR NOMBRES
 {
     system ("cls");
     rlutil::locate(44, 1);
@@ -179,7 +182,7 @@ void pedirNombres(string *jugador1, string *jugador2)
     system ("cls");
 }
 
-void mostrarReglas()
+void mostrarReglas() ///FUNCION PARA MOSTRAR REGLAS Y OBJETIVOS DEL JUEGO
 {
     system ("cls");
     rlutil::setColor(rlutil::CYAN);
@@ -211,7 +214,7 @@ void mostrarReglas()
 
 }
 
-bool volverAlMenu ()
+bool volverAlMenu () ///FUNCION PARA VOLVER AL MENU PRINCIPAL
 {
     char ingresoMenu;
     rlutil::locate(1, 25);
@@ -242,7 +245,7 @@ bool volverAlMenu ()
 }
 
 
-void mostrarAnimacionbienvenida()
+void mostrarAnimacionbienvenida() ///FUNCION PARA MOSTRAR LA ANIMACION DE BIENVENIDA
 {
     int i;
     rlutil::hidecursor();
