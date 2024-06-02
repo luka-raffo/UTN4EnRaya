@@ -375,65 +375,92 @@ void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador2) ///FUNCION DE INGRESOS DE LA MAQUINA
 {
 
-    bool ingresoCorrecto=1;
+
+
+
+    //colocacion de la ficha de la maquina
     int ingresoMaquina=rand()%7+1 ;
 
-    rlutil::locate(45, 1);
-    cout<<"- El ingreso de "<<jugador2<<", es: "<<R<<ingresoMaquina<<RESET;
-    cout<<endl;
-    rlutil::anykey();
-    rlutil::locate(31, 1);
 
-    while(ingresoCorrecto)
-    {
-        //verificar si el ingreso jugador 2 no es una columna llena
-        if (ingresoMaquina>ncol or ingresoMaquina==0)
-        {
-            rlutil::setColor(rlutil::RED);
-            rlutil::locate(35, 18);
-            cout<<"[Esta columna no existe, ingrese una columna valida]: ";
-            rlutil::setColor(rlutil::WHITE);
-            cin>>ingresoMaquina;
-            ingresoCorrecto=1;
-        }
-        else
-        {
-            ingresoCorrecto=0;
-        }
 
-        //verificar si el ingreso jugador 2 no es una columna llena
 
-        for(int i=0; i<ncol; i++)
-        {
-            if(matrizTablero[5][i] != '-' && ingresoMaquina==i+1 )
-            {
-                rlutil::setColor(rlutil::RED);
-                rlutil::locate(35, 18);
-                cout<<"[Esta columna esta llena, ingrese una columna valida]: ";
-                rlutil::setColor(rlutil::WHITE);
-                cin>>ingresoMaquina ;
-                ingresoCorrecto=1;
-            }
-        }
-
-    }
-
-    //colocacion de la ficha del jugador 2
 
     for (int i=0; i<ncol-1; i++)
     {
 
-        if (matrizTablero[i][ingresoMaquina-1] == '-')
-        {
-            matrizTablero[i][ingresoMaquina-1]= 'X';
-            break;
+       for (int x=0; x<ncol-1; x++)
+    {
+
+        if(matrizTablero[i][x] == 'O' && matrizTablero[i+1][x] == 'O' && matrizTablero[i+2][x] == 'O' && matrizTablero[i+3][x] == '-'  )    {
+        ingresoMaquina=x;
+
+
+
+
+
+
         }
 
     }
+
+    }
+
+    for (int i=0; i<ncol-1; i++)
+    {
+
+       for (int x=0; x<ncol-1; x++)
+    {
+
+        if(matrizTablero[i][x] == 'O' && matrizTablero[i][x+1] == 'O' && matrizTablero[i][x+2] == 'O' && matrizTablero[i][x+3] == '-'  )    {
+        ingresoMaquina=x+3;
+
+
+
+
+
+        }
+
+    }
+
+    }
+
+
+
+
+    for (int i=0; i<ncol-1; i++)
+    {
+        if(matrizTablero[i][ingresoMaquina] == '-')
+        {
+            matrizTablero[i][ingresoMaquina]= 'X';
+            break;
+
+        }
+
+    }
+
+
+    //verificar si el ingreso maquina no es una columna llena
+
+
+
+
+
+    if (ingresoMaquina==7)    {
+        ingresoMaquina=0;
+    }
+        rlutil::locate(45, 1);
+
+    cout<<"- El ingreso de "<<jugador2<<", es: "<<R<<ingresoMaquina+1<<RESET;
+    cout<<endl;
+    rlutil::anykey();
+    rlutil::locate(31, 1);
+
     system("cls");
     mostrarCuadricula(matrizTablero);
 
-}
+
+
+    }
 
 void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON LA LOGICA GENERAL DEL JUEGO
 {
