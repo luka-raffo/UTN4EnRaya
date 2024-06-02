@@ -16,7 +16,6 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
     cin>>jugador1;
     system ("cls");
 
-
     while(banderaCorte!=1)
     {
         ingresoJugador1(matrizTablero, nfilas, ncol, jugador1);
@@ -31,7 +30,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                 if(matrizTablero[i][x]=='O' && matrizTablero[i][x+1]=='O'&& matrizTablero[i][x+2]=='O'&& matrizTablero[i][x+3]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    rlutil::locate(45,18);
+                    rlutil::locate(43,18);
                     cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
@@ -51,7 +50,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                 if(matrizTablero[i][x]=='O' && matrizTablero[i+1][x]=='O'&& matrizTablero[i+2][x]=='O'&& matrizTablero[i+3][x]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    rlutil::locate(45,18);
+                    rlutil::locate(43,18);
                     cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
@@ -73,7 +72,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                 if(matrizTablero[i][x]=='O' && matrizTablero[i+1][x+1]=='O'&& matrizTablero[i+2][x+2]=='O'&& matrizTablero[i+3][x+3]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    rlutil::locate(45,18);
+                    rlutil::locate(43,18);
                     cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
@@ -93,7 +92,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                 if(matrizTablero[i][x]=='O' && matrizTablero[i-1][x+1]=='O'&& matrizTablero[i-2][x+2]=='O'&& matrizTablero[i-3][x+3]=='O')
                 {
                     rlutil::setColor(rlutil::GREEN);
-                    rlutil::locate(45,18);
+                    rlutil::locate(43,18);
                     cout<<"¡Felicitaciones " <<jugador1<<", has ganado!"<<endl;
                     cout<<endl;
                     rlutil::setColor(rlutil::WHITE);
@@ -138,7 +137,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                     if(matrizTablero[i][x]=='X' && matrizTablero[i][x+1]=='X'&& matrizTablero[i][x+2]=='X'&& matrizTablero[i][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        rlutil::locate(45,18);
+                        rlutil::locate(43,18);
                         cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
@@ -157,7 +156,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                     if(matrizTablero[i][x]=='X' && matrizTablero[i+1][x]=='X'&& matrizTablero[i+2][x]=='X'&& matrizTablero[i+3][x]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        rlutil::locate(45,18);
+                        rlutil::locate(43,18);
                         cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
@@ -179,7 +178,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                     if(matrizTablero[i][x]=='X' && matrizTablero[i+1][x+1]=='X'&& matrizTablero[i+2][x+2]=='X'&& matrizTablero[i+3][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        rlutil::locate(45,18);
+                        rlutil::locate(43,18);
                         cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
@@ -201,7 +200,7 @@ void JuegoContraMaquina(char matrizTablero[][7],int nfilas, int ncol)  ///FUNCIO
                     if(matrizTablero[i][x]=='X' && matrizTablero[i-1][x+1]=='X'&& matrizTablero[i-2][x+2]=='X'&& matrizTablero[i-3][x+3]=='X')
                     {
                         rlutil::setColor(rlutil::GREEN);
-                        rlutil::locate(45,18);
+                        rlutil::locate(43,18);
                         cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
                         cout<<endl;
                         rlutil::setColor(rlutil::WHITE);
@@ -375,56 +374,69 @@ void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador2) ///FUNCION DE INGRESOS DE LA MAQUINA
 {
 
-
-
-
     //colocacion de la ficha de la maquina
-    int ingresoMaquina=rand()%7+1 ;
-
-
-
-
-
-    for (int i=0; i<ncol-1; i++)
+    int ingresoMaquina=rand()%7+1;
+    for (int i=0; i<nfilas-1; i++)
     {
 
        for (int x=0; x<ncol-1; x++)
-    {
+        {
 
-        if(matrizTablero[i][x] == 'O' && matrizTablero[i+1][x] == 'O' && matrizTablero[i+2][x] == 'O' && matrizTablero[i+3][x] == '-'  )    {
-        ingresoMaquina=x;
-
-
-
-
-
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i+1][x] == 'O' && matrizTablero[i+2][x] == 'O' && matrizTablero[i+3][x] == '-' )
+            {
+                ingresoMaquina=x+1;
+            }
 
         }
 
     }
 
-    }
-
-    for (int i=0; i<ncol-1; i++)
+    for (int i=0; i<nfilas-1; i++)
     {
 
        for (int x=0; x<ncol-1; x++)
-    {
+        {
 
-        if(matrizTablero[i][x] == 'O' && matrizTablero[i][x+1] == 'O' && matrizTablero[i][x+2] == 'O' && matrizTablero[i][x+3] == '-'  )    {
-        ingresoMaquina=x+3;
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i][x+1] == 'O' && matrizTablero[i][x+2] == 'O' && matrizTablero[i][x+3] == '-'  )
+            {
+                ingresoMaquina=x+3;
 
-
-
-
+            }
 
         }
 
     }
 
+    for (int i=0; i<nfilas-1; i++)
+    {
+
+       for (int x=0; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i+1][x+1] == 'O' && matrizTablero[i+2][x+2] == 'O' && matrizTablero[i+3][x+3] == '-'  )
+            {
+                ingresoMaquina=x+3;
+            }
+
+        }
+
     }
 
+    for (int i=0; i<nfilas-1; i++)
+    {
 
+       for (int x=0; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i-1][x-1] == 'O' && matrizTablero[i-2][x-2] == 'O' && matrizTablero[i-3][x-3] == '-'  )
+            {
+                ingresoMaquina=x-3;
+
+            }
+
+        }
+
+    }
 
 
     for (int i=0; i<ncol-1; i++)
@@ -441,24 +453,18 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
 
     //verificar si el ingreso maquina no es una columna llena
 
-
-
-
-
-    if (ingresoMaquina==7)    {
+    if (ingresoMaquina==7)
+    {
         ingresoMaquina=0;
     }
-        rlutil::locate(45, 1);
 
+    rlutil::locate(45, 1);
     cout<<"- El ingreso de "<<jugador2<<", es: "<<R<<ingresoMaquina+1<<RESET;
     cout<<endl;
     rlutil::anykey();
     rlutil::locate(31, 1);
-
     system("cls");
     mostrarCuadricula(matrizTablero);
-
-
 
     }
 
