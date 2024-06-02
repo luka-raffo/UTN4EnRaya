@@ -371,25 +371,31 @@ void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string jugado
 
 }
 
-void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador2) ///FUNCION DE INGRESOS DE LA MAQUINA
+void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugadorMaquina) ///FUNCION DE INGRESOS DE LA MAQUINA
 {
 
     //colocacion de la ficha de la maquina
     int ingresoMaquina=rand()%7+1;
+
+
+
     for (int i=0; i<nfilas-1; i++)
     {
-
+        //evitar que el jugador 1 gane con una fila vertical
        for (int x=0; x<ncol-1; x++)
         {
 
             if(matrizTablero[i][x] == 'O' && matrizTablero[i+1][x] == 'O' && matrizTablero[i+2][x] == 'O' && matrizTablero[i+3][x] == '-' )
             {
-                ingresoMaquina=x+1;
+                ingresoMaquina=x;
             }
 
         }
 
     }
+
+    //evitar que el jugador 1 gane con una fila horizontal hacia la derecha
+
 
     for (int i=0; i<nfilas-1; i++)
     {
@@ -407,6 +413,28 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
 
     }
 
+    //evitar que el jugador 1 gane con una fila horizontal hacia la izquierda
+
+
+    for (int i=0; i<nfilas-1; i++)
+    {
+
+       for (int x=0; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i][x-1] == 'O' && matrizTablero[i][x-2] == 'O' && matrizTablero[i][x-3] == '-'  )
+            {
+                ingresoMaquina=x-3;
+
+            }
+
+        }
+
+    }
+
+    //evitar que el jugador 1 gane con una fila vertical hacia la derecha
+
+
     for (int i=0; i<nfilas-1; i++)
     {
 
@@ -421,6 +449,9 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
         }
 
     }
+
+
+    //evitar que el jugador 1 gane con una fila vertical hacia la izquierda
 
     for (int i=0; i<nfilas-1; i++)
     {
@@ -439,6 +470,14 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     }
 
 
+    //verificar si el ingreso maquina no es una columna llena
+
+    if (ingresoMaquina==7)
+    {
+        ingresoMaquina=0;
+    }
+
+    //revisar
     for (int i=0; i<ncol-1; i++)
     {
         if(matrizTablero[i][ingresoMaquina] == '-')
@@ -448,18 +487,14 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
 
         }
 
+
     }
 
 
-    //verificar si el ingreso maquina no es una columna llena
 
-    if (ingresoMaquina==7)
-    {
-        ingresoMaquina=0;
-    }
 
     rlutil::locate(45, 1);
-    cout<<"- El ingreso de "<<jugador2<<", es: "<<R<<ingresoMaquina+1<<RESET;
+    cout<<"- El ingreso de "<<jugadorMaquina<<", es: "<<R<<ingresoMaquina+1<<RESET;
     cout<<endl;
     rlutil::anykey();
     rlutil::locate(31, 1);
@@ -563,25 +598,7 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON
         }
 
         //empate
-        int contEmpate=0;
-        for (int i=0; i<nfilas; i++)
-        {
-            for (int x=0; x<ncol; x++)
-            {
-                if(matrizTablero[i][x]=='-')
-                {
-                    contEmpate++;
-                }
-            }
-        }
-        if (contEmpate ==0)
-        {
-            banderaCorte=1;
-            rlutil::setColor(rlutil::CYAN);
-            rlutil::locate(45,18);
-            cout<<"¡Han empatado!, se nota que son competitivos..."<<endl;
-            rlutil::setColor(rlutil::WHITE);
-        }
+        empate(matrizTablero, nfilas, ncol, banderaCorte);
 
         //instruccion para que al ganar el jugador 1 no le de el turno al jugador 2
         if (banderaCorte!=1)
@@ -674,7 +691,17 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON
         }
 
         //empate
-        contEmpate=0;
+        empate(matrizTablero, nfilas, ncol, banderaCorte);
+
+    }
+
+    volverAlMenu();
+
+}
+
+void empate(char matrizTablero[][7],int nfilas, int ncol,bool &banderaCorte){
+
+    int contEmpate=0;
         for (int i=0; i<nfilas; i++)
         {
             for (int x=0; x<ncol; x++)
@@ -685,19 +712,14 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON
                 }
             }
         }
-        if (contEmpate==0)
+        if (contEmpate ==0)
         {
             banderaCorte=1;
             rlutil::setColor(rlutil::CYAN);
             rlutil::locate(45,18);
-            cout<<" ¡Han empatado!, se nota que son competitivos..."<<endl;
+            cout<<"¡Han empatado!, se nota que son competitivos..."<<endl;
             rlutil::setColor(rlutil::WHITE);
-
         }
-
-    }
-
-    volverAlMenu();
 
 }
 

@@ -28,4 +28,6 @@
 
     void ingresoJugador2(char matrizTablero[][7],int nfilas, int ncol, string);
 
+    void empate(char matrizTablero[][7],int nfilas, int ncol,bool &banderaCorte);
+
 #endif // DECLARACIONES_H_INCLUDED
