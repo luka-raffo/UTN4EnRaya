@@ -10,7 +10,7 @@ bool cierreDelJuego() ///FUNCION PARA SALIR DEL JUEGO
     system ("pause");
     system ("cls");
     rlutil::setColor(rlutil::CYAN);
-    cout<<"Â¡Hasta la proxima!"<<endl;
+    cout<<"¡Hasta la proxima!"<<endl;
     return 0;
 
 }
@@ -51,21 +51,21 @@ bool mostrarMenuPrincipal (char matrizTablero[][7],int nfilas, int ncol) ///FUNC
     cout<<endl;
     rlutil::locate(46, 13);
     cout<<R<<"->"<<RESET<<" Seleccione [1] para jugar "<<R<<"<- "<<RESET<<endl;
-    rlutil::locate(29, 14);
+    rlutil::locate(29, 15);
     cout<<R<<"->"<<RESET<<" Seleccione [2] para ver los objetivos y las reglas del juego "<<R<<"<- "<<RESET<<endl;
-    rlutil::locate(46, 15);
+    rlutil::locate(46, 17);
     cout<<R<<"->"<<RESET<<" Seleccione [0] para salir "<<R<<"<- "<<RESET<<endl;
     cout<<endl;
-    rlutil::locate(1, 17);
+    rlutil::locate(1, 19);
     rlutil::setColor(rlutil::BLUE);
     cout<<"========================================================================================================================"<<endl;
     rlutil::setColor(rlutil::WHITE);
     cout<<endl;
-    rlutil::locate(58, 19);
+    rlutil::locate(58, 21);
     cout<<R<<"-> "<<RESET;
-    rlutil::locate(62, 19);
+    rlutil::locate(62, 21);
     cout<<R<<" <-"<<RESET;
-    rlutil::locate(61, 19);
+    rlutil::locate(61, 21);
     cin>>ingresoMenu;
     system("cls");
     string jugador1;
@@ -262,22 +262,27 @@ void mostrarReglas() ///FUNCION PARA MOSTRAR REGLAS Y OBJETIVOS DEL JUEGO
     cout<<"- El primer jugador en conectar cuatro fichas consecutivas gana el juego."<<endl;
     cout<<"- Si todas las posiciones del tablero estan llenas y ningun jugador ha logrado conectar cuatro fichas, el juego \n  termina en empate."<<endl;
     cout<<"- Las fichas no pueden ser removidas ni movidas una vez colocadas."<<endl;
-    cout<<"========================================================================================================================"<<endl;
 
 }
 
 bool volverAlMenu () ///FUNCION PARA VOLVER AL MENU PRINCIPAL
 {
     char ingresoMenu;
-    rlutil::locate(1, 25);
+    rlutil::locate(1, 26);
+    rlutil::setColor(rlutil::CYAN);
     cout<<"========================================================================================================================"<<endl;
-    rlutil::locate(42, 26);
-    cout<<"-> Para volver al menu, ingrese [1] <-"<<endl;
-    rlutil::locate(1, 27);
+    rlutil::setColor(rlutil::WHITE);
+    rlutil::locate(42, 28);
+    cout<<R<<"->"<<RESET" Para volver al menu, ingrese [1] "<<R<<"<-"<<RESET<<endl;
+    rlutil::locate(1, 30);
+    rlutil::setColor(rlutil::CYAN);
     cout<<"========================================================================================================================"<<endl;
-    rlutil::locate(57, 28);
-    cout<<"- ";
-    rlutil::locate(59, 28);
+    rlutil::setColor(rlutil::WHITE);
+    rlutil::locate(57, 32);
+    cout<<R<<"-> "<<RESET;
+    rlutil::locate(61, 32);
+    cout<<R<<" <-"<<RESET;
+    rlutil::locate(60, 32);
     cin>>ingresoMenu;
     system ("cls");
 
