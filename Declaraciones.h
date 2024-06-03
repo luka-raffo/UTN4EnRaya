@@ -30,4 +30,8 @@
 
     void empate(char matrizTablero[][7],int nfilas, int ncol,bool &banderaCorte);
 
+    void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol, int &ingresoMaquina);
+
+    void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &ingresoMaquina);
+
 #endif // DECLARACIONES_H_INCLUDED
