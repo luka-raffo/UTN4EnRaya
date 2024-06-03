@@ -416,10 +416,10 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     //evitar que el jugador 1 gane con una fila horizontal hacia la izquierda
 
 
-    for (int i=0; i<nfilas-1; i++)
+    for (int i=3; i<nfilas-1; i++)
     {
 
-       for (int x=0; x<ncol-1; x++)
+       for (int x=3; x<ncol-1; x++)
         {
 
             if(matrizTablero[i][x] == 'O' && matrizTablero[i][x-1] == 'O' && matrizTablero[i][x-2] == 'O' && matrizTablero[i][x-3] == '-'  )
@@ -453,10 +453,10 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
 
     //evitar que el jugador 1 gane con una fila vertical hacia la izquierda
 
-    for (int i=0; i<nfilas-1; i++)
+    for (int i=3; i<nfilas-1; i++)
     {
 
-       for (int x=0; x<ncol-1; x++)
+       for (int x=3; x<ncol-1; x++)
         {
 
             if(matrizTablero[i][x] == 'O' && matrizTablero[i-1][x-1] == 'O' && matrizTablero[i-2][x-2] == 'O' && matrizTablero[i-3][x-3] == '-'  )
@@ -470,19 +470,33 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     }
 
 
-    //verificar si el ingreso maquina no es una columna llena
-
-    if (ingresoMaquina==7)
+    if (ingresoMaquina>=7)
     {
         ingresoMaquina=0;
     }
 
-    //revisar
+    //verificar si el ingreso maquina no es una columna llena
+
+    bool ingresoCorrecto= false;
+
+    while(!ingresoCorrecto) {
+
+    if(matrizTablero[5][ingresoMaquina] != '-')
+        {
+            ingresoMaquina=rand()%7;
+            cout<<"hola";
+        }
+
+
     for (int i=0; i<ncol-1; i++)
     {
+
+
+
         if(matrizTablero[i][ingresoMaquina] == '-')
         {
             matrizTablero[i][ingresoMaquina]= 'X';
+            ingresoCorrecto=true;
             break;
 
         }
@@ -491,6 +505,14 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     }
 
 
+
+
+
+
+
+
+
+    }
 
 
     rlutil::locate(45, 1);
