@@ -420,13 +420,6 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     }
 
 
-
-
-
-
-
-
-
     }
 
 
@@ -636,7 +629,8 @@ void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON
 
 }
 
-void empate(char matrizTablero[][7],int nfilas, int ncol,bool &banderaCorte){
+void empate(char matrizTablero[][7],int nfilas, int ncol,bool &banderaCorte)
+{
 
     int contEmpate=0;
         for (int i=0; i<nfilas; i++)
@@ -660,12 +654,12 @@ void empate(char matrizTablero[][7],int nfilas, int ncol,bool &banderaCorte){
 
 }
 
-void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ingresoMaquina){
+void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ingresoMaquina)
+{
 
-
+//evitar que el jugador 1 gane con una fila vertical
     for (int i=0; i<nfilas-1; i++)
     {
-        //evitar que el jugador 1 gane con una fila vertical
        for (int x=0; x<ncol-1; x++)
         {
 
@@ -679,7 +673,6 @@ void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ing
     }
 
     //evitar que el jugador 1 gane con una fila horizontal hacia la derecha
-
 
     for (int i=0; i<nfilas-1; i++)
     {
@@ -699,7 +692,6 @@ void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ing
 
     //evitar que el jugador 1 gane con una fila horizontal hacia la izquierda
 
-
     for (int i=3; i<nfilas-1; i++)
     {
 
@@ -718,7 +710,6 @@ void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ing
 
     //evitar que el jugador 1 gane con una fila vertical hacia la derecha
 
-
     for (int i=0; i<nfilas-1; i++)
     {
 
@@ -733,7 +724,6 @@ void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ing
         }
 
     }
-
 
     //evitar que el jugador 1 gane con una fila vertical hacia la izquierda
 
@@ -752,12 +742,71 @@ void evitar4EnRayaJugador1(char matrizTablero[][7],int nfilas, int ncol,int &ing
         }
 
     }
+
+    for (int i=0; i<nfilas-1; i++) //EVITAR QUE EL J1 GANE HORIZONTALMENTE, TRABANDO UNA EN EL MEDIO
+    {
+
+       for (int x=0; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i][x+1] == 'O' && matrizTablero[i][x+2] == '-' && matrizTablero[i][x+3] == 'O'  )
+            {
+                ingresoMaquina=x+2;
+            }
+
+        }
+
+    }
+
+    for (int i=0; i<nfilas-1; i++) //EVITAR QUE EL J1 GANE HORIZONTALMENTE, TRABANDO UNA EN EL MEDIO
+    {
+
+       for (int x=0; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i][x+1] == '-' && matrizTablero[i][x+2] == 'O' && matrizTablero[i][x+3] == 'O'  )
+            {
+                ingresoMaquina=x+1;
+            }
+
+        }
+
+    }
+
+    for (int i=3; i<nfilas-1; i++) //EVITAR QUE EL J1 GANE HORIZONTALMENTE HACIA LA IZQ, TRABANDO UNA EN EL MEDIO
+    {
+
+       for (int x=3; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i][x-1] == '-' && matrizTablero[i][x-2] == 'O' && matrizTablero[i][x-3] == 'O'  )
+            {
+                ingresoMaquina=x-1;
+            }
+
+        }
+
+    }
+
+    for (int i=3; i<nfilas-1; i++) //EVITAR QUE EL J1 GANE HORIZONTALMENTE A LA IZQ, TRABANDO UNA EN EL MEDIO
+    {
+
+       for (int x=3; x<ncol-1; x++)
+        {
+
+            if(matrizTablero[i][x] == 'O' && matrizTablero[i][x-1] == 'O' && matrizTablero[i][x-2] == '-' && matrizTablero[i][x-3] == 'O'  )
+            {
+                ingresoMaquina=x-2;
+            }
+
+        }
+
+    }
+
 }
 
-
-void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &ingresoMaquina)  {
-
-
+void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &ingresoMaquina)
+{
 
     for (int i=0; i<nfilas-1; i++)
     {
@@ -792,10 +841,10 @@ void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &
 
     }
 
-
     int chance4Enraya=rand()%3;
 
-    if(chance4Enraya==1)    {
+    if(chance4Enraya==1)
+        {
     //ganar en una fila  vertical hacia la derecha
 
     for (int i=0; i<nfilas-1; i++)
@@ -812,12 +861,13 @@ void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &
         }
 
     }
-    }
+        }
 
 
     chance4Enraya=rand()%2;
 
-    if(chance4Enraya==1)    {
+    if(chance4Enraya==1)
+        {
     //ganar en una fila horizontal hacia la izquierda
     for (int i=3; i<nfilas-1; i++)
     {
@@ -834,10 +884,11 @@ void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &
         }
 
     }
-    }
+        }
 
     chance4Enraya=rand()%4;
-    if(chance4Enraya==1)    {
+    if(chance4Enraya==1)
+        {
     //ganar con una fila vertical hacia la izquierda
 
     for (int i=3; i<nfilas-1; i++)
@@ -855,7 +906,7 @@ void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &
         }
 
     }
-    }
+        }
 }
 
 #endif // FUNCIONESDEJUEGO_H_INCLUDED
