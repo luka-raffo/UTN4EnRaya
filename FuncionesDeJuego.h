@@ -1,6 +1,3 @@
-
-if (ingresoMaquina==7)
-
 #ifndef FUNCIONESDEJUEGO_H_INCLUDED
 #define FUNCIONESDEJUEGO_H_INCLUDED
 
@@ -389,14 +386,9 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
 
 
     if (ingresoMaquina>=7)
-
     {
         ingresoMaquina=0;
     }
-
-
-    for (int i=0; i<ncol-1; i++)
-    {
 
     //verificar si el ingreso maquina no es una columna llena
 
@@ -424,6 +416,7 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
 
         }
 
+
     }
 
 
@@ -438,17 +431,200 @@ void ingresoMaquina(char matrizTablero[][7],int nfilas, int ncol, string jugador
     system("cls");
     mostrarCuadricula(matrizTablero);
 
-
     }
 
-    for(int i=0; i<ncol; i++)
+void logicaDelJuego(char matrizTablero[][7],int nfilas, int ncol) ///FUNCION CON LA LOGICA GENERAL DEL JUEGO
+{
+    string jugador1;
+    string jugador2;
+    pedirNombres(&jugador1, &jugador2);
+    bool banderaCorte = 0;
+
+    while(banderaCorte!=1)
     {
-        if(matrizTablero[5][i] != '-' && ingresoMaquina==i+1)
+        ingresoJugador1(matrizTablero, nfilas, ncol, jugador1);
+
+        for (int i=0; i<nfilas; i++)
         {
-            ingresoMaquina=rand()%7+1;
-            matrizTablero[i][ingresoMaquina] = 'X';
+            for (int x=0; x<ncol-3; x++)
+            {
+
+                //determina si hubo 4 en raya en Horizontal
+
+                if(matrizTablero[i][x]=='O' && matrizTablero[i][x+1]=='O'&& matrizTablero[i][x+2]=='O'&& matrizTablero[i][x+3]=='O')
+                {
+                    rlutil::setColor(rlutil::GREEN);
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
+                    cout<<endl;
+                    rlutil::setColor(rlutil::WHITE);
+                    rlutil::anykey();
+                    cout<<endl;
+                    banderaCorte=1;
+                }
+            }
         }
+
+        for (int i=0; i<nfilas-3; i++)
+        {
+            for (int x=0; x<ncol; x++)
+            {
+                //determina si hubo 4 en raya en Vertical
+
+                if(matrizTablero[i][x]=='O' && matrizTablero[i+1][x]=='O'&& matrizTablero[i+2][x]=='O'&& matrizTablero[i+3][x]=='O')
+                {
+                    rlutil::setColor(rlutil::GREEN);
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
+                    cout<<endl;
+                    rlutil::setColor(rlutil::WHITE);
+                    rlutil::anykey();
+                    cout<<endl;
+                    banderaCorte=1;
+
+                }
+            }
+        }
+
+        for (int i=0; i<nfilas-3; i++)
+        {
+            for (int x=0; x<ncol-3; x++)
+            {
+
+                //determina si hubo 4 en raya en Diagonal
+
+                if(matrizTablero[i][x]=='O' && matrizTablero[i+1][x+1]=='O'&& matrizTablero[i+2][x+2]=='O'&& matrizTablero[i+3][x+3]=='O')
+                {
+                    rlutil::setColor(rlutil::GREEN);
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones "<<jugador1<<", has ganado!"<<endl;
+                    cout<<endl;
+                    rlutil::setColor(rlutil::WHITE);
+                    rlutil::anykey();
+                    cout<<endl;
+                    banderaCorte=1;
+                }
+            }
+        }
+
+        for (int i=0; i<nfilas+3; i++)
+        {
+            for (int x=0; x<ncol-3; x++)
+            {
+                //determina si hubo 4 en raya en Diagonal Invertida
+
+                if(matrizTablero[i][x]=='O' && matrizTablero[i-1][x+1]=='O'&& matrizTablero[i-2][x+2]=='O'&& matrizTablero[i-3][x+3]=='O')
+                {
+                    rlutil::setColor(rlutil::GREEN);
+                    rlutil::locate(45,18);
+                    cout<<"¡Felicitaciones " <<jugador1<<", has ganado!"<<endl;
+                    cout<<endl;
+                    rlutil::setColor(rlutil::WHITE);
+                    rlutil::anykey();
+                    cout<<endl;
+                    banderaCorte=1;
+                }
+            }
+        }
+
+        //empate
+        empate(matrizTablero, nfilas, ncol, banderaCorte);
+
+        //instruccion para que al ganar el jugador 1 no le de el turno al jugador 2
+        if (banderaCorte!=1)
+        {
+            ingresoJugador2(matrizTablero, nfilas, ncol, jugador2);
+
+            for (int i=0; i<nfilas; i++)
+            {
+                for (int x=0; x<ncol-3; x++)
+                {
+                    //determina si hubo 4 3n raya en horizontal
+                    if(matrizTablero[i][x]=='X' && matrizTablero[i][x+1]=='X'&& matrizTablero[i][x+2]=='X'&& matrizTablero[i][x+3]=='X')
+                    {
+                        rlutil::setColor(rlutil::GREEN);
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<endl;
+                        rlutil::setColor(rlutil::WHITE);
+                        rlutil::anykey();
+                        cout<<endl;
+                        banderaCorte=1;
+                    }
+                }
+            }
+
+            for (int i=0; i<nfilas-3; i++)
+            {
+                for (int x=0; x<ncol; x++)
+                {
+                    //determina si hubo 4 en raya en Vertical
+                    if(matrizTablero[i][x]=='X' && matrizTablero[i+1][x]=='X'&& matrizTablero[i+2][x]=='X'&& matrizTablero[i+3][x]=='X')
+                    {
+                        rlutil::setColor(rlutil::GREEN);
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<endl;
+                        rlutil::setColor(rlutil::WHITE);
+                        rlutil::anykey();
+                        cout<<endl;
+                        banderaCorte=1;
+
+                    }
+                }
+            }
+
+
+            for (int i=0; i<nfilas-3; i++)
+            {
+                for (int x=0; x<ncol-3; x++)
+                {
+
+                    //determina si hubo 4 en raya en Diagonal
+                    if(matrizTablero[i][x]=='X' && matrizTablero[i+1][x+1]=='X'&& matrizTablero[i+2][x+2]=='X'&& matrizTablero[i+3][x+3]=='X')
+                    {
+                        rlutil::setColor(rlutil::GREEN);
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<endl;
+                        rlutil::setColor(rlutil::WHITE);
+                        rlutil::anykey();
+                        cout<<endl;
+                        banderaCorte=1;
+                    }
+                }
+            }
+
+            //determina si hubo 4 en raya en Diagonal Invertida
+
+            for (int i=0; i<nfilas+3; i++)
+            {
+                for (int x=0; x<ncol-3; x++)
+                {
+
+                    //determina si hubo 4 en raya en Diagonal Invertida
+                    if(matrizTablero[i][x]=='X' && matrizTablero[i-1][x+1]=='X'&& matrizTablero[i-2][x+2]=='X'&& matrizTablero[i-3][x+3]=='X')
+                    {
+                        rlutil::setColor(rlutil::GREEN);
+                        rlutil::locate(45,18);
+                        cout<<"¡Felicitaciones "<<jugador2<<", has ganado!"<<endl;
+                        cout<<endl;
+                        rlutil::setColor(rlutil::WHITE);
+                        rlutil::anykey();
+                        cout<<endl;
+                        banderaCorte=1;
+                    }
+                }
+            }
+
+
+        }
+
+        //empate
+        empate(matrizTablero, nfilas, ncol, banderaCorte);
+
     }
+
     volverAlMenu();
 
 }
@@ -734,4 +910,3 @@ void completar4EnRayaMaquina (char matrizTablero[][7],int nfilas, int ncol,int &
 }
 
 #endif // FUNCIONESDEJUEGO_H_INCLUDED
-
